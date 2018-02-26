@@ -1,0 +1,32 @@
+.html-header {
+    padding: 5%;
+    text-align: center;
+}
+
+.html-title {
+    font-size: 2.5rem;
+    font-family: fantasy;
+}
+
+.html-picture-box {
+    display: flex;
+    justify-content: center;
+}
+
+.html-button {
+    height: 35px;
+    width: 35%;
+    outline: none;
+    border: 1px solid #188eee;
+    background: transparent;
+    color: #188eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.html-footer {
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+}
