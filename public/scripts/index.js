@@ -1,5 +1,6 @@
 require('./pages.js')
 require('../styles/style.css')
+require('./background.js')
 const screenWidth = document.body.offsetWidth;
 if (screenWidth >= 1000) {
     $("#flipbook").turn({

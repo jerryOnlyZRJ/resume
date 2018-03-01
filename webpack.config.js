@@ -44,6 +44,9 @@ module.exports = {
         new CopyWebpackPlugin([{
             from: __dirname + '/public/images',
             to: __dirname + '/build/images'
+        },{
+            from: __dirname + '/public/scripts/vector.js',
+            to: __dirname + '/build/vector.js'
         }])
     ]
 }

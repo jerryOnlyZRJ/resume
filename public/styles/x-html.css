@@ -1,13 +1,3 @@
-.html-header {
-    padding: 5%;
-    text-align: center;
-}
-
-.html-title {
-    font-size: 2.5rem;
-    font-family: fantasy;
-}
-
 .html-picture-box {
     display: flex;
     justify-content: center;

@@ -65,13 +65,44 @@ xtag.register('x-selfintro', {
 })
 require('../styles/x-html.css')
 xtag.register('x-html', {
-    content: `<header class="html-header">
-            <h2 class="html-title">web component</h2>
+    content: `<header class="xtag-header">
+            <h2 class="xtag-title">web component</h2>
             <hr style="margin: 10px">
             <span style="color: #808080">H5语义化，元素组件化</span>
         </header>
         <section class="html-picture-box">
-            <img src="../public/images/html.png" alt="">
+            <img src="images/html.png" alt="">
+        </section>
+        <footer class="html-footer">
+            <button class="html-button">相关文档</button>
+        </footer>`
+})
+require('../styles/x-css.css')
+xtag.register('x-css', {
+    content: `<header class="xtag-header">
+            <h2 class="xtag-title">CSS3</h2>
+            <hr style="margin: 10px">
+            <span style="color: #808080">CSS也可以做动画！！！</span>
+        </header>
+        <main class="animation-box">
+            <div id="cube">
+                <div><img src="images/jerry.jpg" /></div>
+                <div><img src="images/jerry.jpg" /></div>
+                <div><img src="images/jerry.jpg" /></div>
+                <div><img src="images/jerry.jpg" /></div>
+                <div><img src="images/jerry.jpg" /></div>
+                <div><img src="images/jerry.jpg" /></div>
+            </div>
+        </main>`
+})
+xtag.register('x-es6', {
+    content: `<header class="xtag-header">
+            <h2 class="xtag-title">ES6</h2>
+            <hr style="margin: 10px">
+            <span style="color: #808080">将OOP思想代入JavaScript</span>
+        </header>
+        <section class="html-picture-box" style="zoom: 0.6">
+            <img src="images/ES6.png" alt="">
         </section>
         <footer class="html-footer">
             <button class="html-button">相关文档</button>

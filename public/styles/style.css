@@ -1,8 +1,9 @@
-body {
+.container {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .hard {
@@ -12,4 +13,20 @@ body {
 #flipbook .page {
     border: 1px solid grey;
     background: #fff;
+}
+
+.x-css {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.xtag-header {
+    padding: 5%;
+    text-align: center;
+}
+
+.xtag-title {
+    font-size: 2.5rem;
+    font-family: fantasy;
 }
