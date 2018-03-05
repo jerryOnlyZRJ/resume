@@ -13,6 +13,7 @@
 
     body {
         display: flex;
+        background: #188eee;
         height: 100vh;
         justify-content: center;
         align-items: center;
@@ -26,13 +27,89 @@
     }
     /*组件部分*/
 
-    
+    .load7 {
+        display: flex;
+        background: lightgray;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .load7 div {
+        color: #808080;
+        font-weight: bold;
+    }
+
+    .load7 .loader,
+    .load7 .loader:before,
+    .load7 .loader:after {
+        border-radius: 50%;
+        width: 1.5em;
+        height: 1.5em;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation: load7 1.8s infinite ease-in-out;
+        animation: load7 1.8s infinite ease-in-out;
+    }
+
+    .load7 .loader {
+        color: #ffffff;
+        font-size: 10px;
+        position: relative;
+        text-indent: -9999em;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+
+    .load7 .loader:before,
+    .load7 .loader:after {
+        content: '';
+        position: absolute;
+        top: 0;
+    }
+
+    .load7 .loader:before {
+        left: -3.5em;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+
+    .load7 .loader:after {
+        left: 3.5em;
+    }
+
+    @-webkit-keyframes load7 {
+        0%,
+        80%,
+        100% {
+            box-shadow: 0 0 0 1.3em inset;
+        }
+        40% {
+            box-shadow: 0 0 0 0;
+        }
+    }
+
+    @keyframes load7 {
+        0%,
+        80%,
+        100% {
+            box-shadow: 0 0 0 1.3em inset;
+        }
+        40% {
+            box-shadow: 0 0 0 0;
+        }
+    }
     </style>
 </head>
 
 <body>
     <div class="container">
-        
+        <div class="load7">
+            <div>下拉加载更多...</div>
+        </div>
     </div>
 </body>
 

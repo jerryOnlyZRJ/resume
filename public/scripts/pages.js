@@ -1,8 +1,8 @@
-require('./turn.min.js');
+require('./turn.min.js')
 require('../styles/x-selfinfo.css')
-//x-selfinfo
+// x-selfinfo
 xtag.register('x-selfinfo', {
-    content: `<div class="main">
+  content: `<div class="main">
 			<div class="user-avatar">
 				<img src="http://ac-iiyq8wju.clouddn.com/f81157e67c039ec9f5f4.png" alt="">
 			</div>
@@ -26,11 +26,11 @@ xtag.register('x-selfinfo', {
 				<li>出生年月：1997年9月</li>
 			</ul>
 		</div>`
-});
-//x-selfintro
+})
+// x-selfintro
 require('../styles/x-selfintro.css')
 xtag.register('x-selfintro', {
-    content: `<div class="self-intro">
+  content: `<div class="self-intro">
             <figure class="dream-picture">
                 <img src="images/dream.jpg" alt="">
                 <span style="font-size: 1.5rem;">平生逐梦，此心不悔</span>
@@ -65,7 +65,7 @@ xtag.register('x-selfintro', {
 })
 require('../styles/x-html.css')
 xtag.register('x-html', {
-    content: `<header class="xtag-header">
+  content: `<header class="xtag-header">
             <h2 class="xtag-title">web component</h2>
             <hr style="margin: 10px">
             <span style="color: #808080">H5语义化，元素组件化</span>
@@ -73,13 +73,11 @@ xtag.register('x-html', {
         <section class="html-picture-box">
             <img src="images/html.png" alt="">
         </section>
-        <footer class="html-footer">
-            <button class="html-button">相关文档</button>
-        </footer>`
+        `
 })
 require('../styles/x-css.css')
 xtag.register('x-css', {
-    content: `<header class="xtag-header">
+  content: `<header class="xtag-header">
             <h2 class="xtag-title">CSS3</h2>
             <hr style="margin: 10px">
             <span style="color: #808080">CSS也可以做动画！！！</span>
@@ -96,7 +94,7 @@ xtag.register('x-css', {
         </main>`
 })
 xtag.register('x-es6', {
-    content: `<header class="xtag-header">
+  content: `<header class="xtag-header">
             <h2 class="xtag-title">ES6</h2>
             <hr style="margin: 10px">
             <span style="color: #808080">将OOP思想代入JavaScript</span>
@@ -108,3 +106,5 @@ xtag.register('x-es6', {
             <button class="html-button">相关文档</button>
         </footer>`
 })
+//douban-pocket
+require('../../src/douban/index.jsx')
