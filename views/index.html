@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Jerry's resume</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_472344_lhevwuu0kxx0f6r.css">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_565661_zs3hmd766klc8fr.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_472344_ys9ns30t8njhsemi.css">
 </head>
 
 <body>
+    <div class="loading-page displayed"><span>loading...</span></div>
     <div class="container" id="container">
         <div id="background"></div>
         <ul class="color-selector">
@@ -20,12 +20,34 @@
             <li></li>
         </ul>
         <div id="flipbook">
-            <div class="hard"> Turn.js </div>
+            <div class="hard"> 
+                <img class="cover-img" src="static/images/hard.jpg" alt=""> 
+                <div class="hard-arrow"><i class="iconfont icon-arrow"></i></div>
+            </div>
             <div>
                 <x-selfinfo></x-selfinfo>
             </div>
             <div>
                 <x-selfintro></x-selfintro>
+            </div>
+            <div>
+                <div class="main-bank">
+                    <span>项</span>
+                    <span>目</span>
+                    <span>经</span>
+                    <span>历</span>
+                </div>
+            </div>
+            <div>
+                <project-video class="project-box"></project-video>
+            </div>
+            <div>
+                <project-recorder class="project-box"></project-recorder>
+            </div>
+            <div class="main-bank">
+                <span>实</span>
+                <span>战</span>
+                <span>demo</span>
             </div>
             <div>
                 <x-html></x-html>
@@ -36,15 +58,35 @@
             <div>
                 <x-es6></x-es6>
             </div>
-            <div> <div id="douban"></div> </div>
-            <div> Page 7 </div>
-            <div> Page 8 </div>
-            <div class="hard"></div>
+            <div>
+                <x-jquery></x-jquery>
+            </div>
+            <div>
+                <x-chat class="x-chat"></x-chat>
+            </div>
+            <div>
+                <x-react></x-react>
+            </div>
+            <div>
+                <div id="douban"></div>
+            </div>
+            <div>
+                <x-end></x-end>
+            </div>
+            <div class="hard" style="background: #d6d6d6;"></div>
         </div>
     </div>
+    <script type="text/javascript">
+    function isChrome() {
+        return navigator.userAgent.indexOf("Chrome") > -1 ? true : false
+    }
+    if (!isChrome()) {
+        document.body.innerHTML = '<span class="browerErr">Sorry (。﹏。!) 请使用PC端Chrome浏览器打开页面</span>'
+    }
+    </script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/x-tag/1.5.11/x-tag-core-with-shadowdom.min.js"></script>
-    <script src="vector.js"></script>
+    <script src="./static/scripts/vector.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@ class App extends Component {
             data: books.slice(0, 10),
             itemIndex: 0,
             detailShow: false,
-            keyword: null
+            keyword: "腾讯"
         }
     }
     afterSearch(response, keyword) {
@@ -29,6 +29,7 @@ class App extends Component {
         this.contentlist.list.scrollTop = 0
     }
     afterGetMore(response) {
+        //TODOS:数据资源不够时的解决方案
         this.setState({
             data: this.state.data.concat(response),
             start: this.state.start += 10
@@ -43,7 +44,8 @@ class App extends Component {
         this.setState({
             data: books.slice(0, 10),
             type: 0,
-            start: 10
+            start: 10,
+            keyword: "腾讯"
         })
         this.contentlist.list.scrollTop = 0
         this.removeActive()
@@ -53,7 +55,8 @@ class App extends Component {
         this.setState({
             data: movies.slice(0, 10),
             type: 1,
-            start: 10
+            start: 10,
+            keyword: "冯小刚"
         })
         this.contentlist.list.scrollTop = 0
         this.removeActive()
@@ -63,7 +66,8 @@ class App extends Component {
         this.setState({
             data: musics.slice(0, 10),
             type: 2,
-            start: 10
+            start: 10,
+            keyword: "张学友"
         })
         this.contentlist.list.scrollTop = 0
         this.removeActive()

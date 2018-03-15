@@ -1,3 +1,38 @@
+.loading-page {
+    display: none;
+}
+
+.loading-page.displayed {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: #ffff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: fantasy;
+}
+
+.browerErr {
+    position: absolute;
+    left: 50%;
+    width: 36rem;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    color: #188eee;
+    font-size: 3rem;
+    font-family: -webkit-pictograph;
+}
+
+p {
+    line-height: 1.5;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -6,8 +41,24 @@
     overflow: hidden;
 }
 
+.main-bank {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    color: #188eee;
+    font-family: cursive;
+}
+
 .hard {
     background: lightgrey;
+}
+
+.hard .cover-img {
+    width: 100%;
+    height: 100%;
 }
 
 #flipbook .page {
@@ -18,6 +69,12 @@
 .x-css {
     display: flex;
     flex-direction: column;
+    height: 100%;
+}
+
+.x-chat {
+    display: block;
+    position: relative;
     height: 100%;
 }
 
@@ -33,4 +90,33 @@
 
 #douban {
     height: 100%;
+}
+
+.text-describe {
+    padding: 2rem;
+}
+
+p {
+    text-indent: 2rem;
+}
+
+.hard-arrow {
+    position: absolute;
+    bottom: 8rem;
+    right: 1rem;
+    color: #188eee;
+    animation: arrowMove 0.75s ease-in infinite alternate;
+}
+
+.hard-arrow .icon-arrow {
+    font-size: 5rem;
+}
+
+@keyframes arrowMove {
+    from {
+        right: 0.5rem;
+    }
+    to {
+        right: 3rem;
+    }
 }

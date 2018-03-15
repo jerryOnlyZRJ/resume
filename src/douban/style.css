@@ -1,5 +1,6 @@
 .app {
     display: flex;
+    position: relative;
     height: 100%;
     flex-direction: column;
     overflow: hidden;
@@ -55,6 +56,7 @@
     flex: 8;
     box-sizing: border-box;
     overflow-y: scroll;
+    padding: 0;
 }
 
 .content-item {
@@ -145,11 +147,11 @@
 }
 
 .content-detail {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background: #fff;
     overflow: scroll;
 }

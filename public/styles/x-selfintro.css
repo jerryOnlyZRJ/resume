@@ -28,8 +28,8 @@
 
 .section-hd .section-tt {
     position: relative;
-    left: calc(50% - 3.75rem);
-    top: -0.6rem;
+    left: 50%;
+    transform: translateX(-50%);
     height: 2rem;
     width: 7.5rem;
     color: #188eee;

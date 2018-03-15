@@ -1,0 +1,1 @@
+解压缩后打开index.html或者访问网站：http://jerryonlyzrj.com/resume 查看

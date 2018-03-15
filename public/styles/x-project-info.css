@@ -1,0 +1,170 @@
+.project-box {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-section-hd {
+    position: relative;
+    text-align: center;
+    margin: 0 1rem 0;
+}
+
+
+
+
+/*设置大标题文字样式*/
+
+.project-section-hd .project-section-tt {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    color: #188eee;
+    font-size: 1.5rem;
+    background: #fff;
+}
+
+
+
+
+/*设置大标题灰色分割线样式*/
+
+.project-section-hd::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    left: 0;
+    top: 50%;
+}
+
+
+
+
+/*设置详细信息区块为flexbox*/
+
+.job-box {
+    display: flex;
+}
+
+
+
+
+/*设置区块左侧灰色分割线样式*/
+
+.job-box:nth-child(2) .blue-point {
+    position: relative;
+    width: 2px;
+    min-height: 50px;
+    margin: 30px 20px 0px 40px;
+    background: lightgrey;
+    background-clip: content-box;
+}
+
+
+
+
+/*设置区块标题左侧蓝点样式*/
+
+.job-box:nth-child(2) .blue-point:before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #188eee;
+    box-shadow: 0 0 0 4px rgba(24, 142, 238, 0.3);
+    left: -5px;
+    top: -8px;
+}
+
+
+
+
+/*引用标题左侧蓝点动画*/
+
+.job-box:hover .blue-point:before {
+    animation: pointscale 1s linear;
+}
+
+
+
+
+/*设置标题左侧蓝点动画*/
+
+@keyframes pointscale {
+    from {
+        box-shadow: 0 0 0 0px rgba(24, 142, 238, 0.3);
+    }
+    to {
+        box-shadow: 0 0 0 6px rgba(24, 142, 238, 0.1);
+    }
+}
+
+
+
+
+/*设置详细信息区块布局为flexbox*/
+
+.job-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.job-info header {
+    margin: 10px 0;
+}
+
+
+
+
+/*设置区块内标题样式*/
+
+.job-info header h2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+
+
+
+/*设置区块说明文字样式*/
+
+.job-info .job-detail {
+    color: grey;
+    padding-right: 2rem;
+}
+
+.job-detail.project-link {
+    text-indent: 0;
+    margin: 0;
+}
+
+
+/*设置左侧灰色分割线末端渐变*/
+
+.job-box:nth-child(3) .blue-point {
+    position: relative;
+    width: 2px;
+    min-height: 50px;
+    margin: 0px 20px 0px 40px;
+    background: linear-gradient(lightgrey 80%, lightgrey, white);
+}
+
+.job-box:nth-child(3) .blue-point:before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #188eee;
+    box-shadow: 0 0 0 4px rgba(24, 142, 238, 0.3);
+    left: -5px;
+    top: 20px;
+}
