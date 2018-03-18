@@ -1,3 +1,4 @@
+
 import React, {Component} from 'React'
 import BookItem from './bookItem'
 import MovieItem from './movieItem'
@@ -27,6 +28,13 @@ class ContentList extends Component {
     })
   }
   render () {
+    if(this.props.data.length === 0){
+      return(
+        <ul className='content-list' ref={list => this.list = list} onScroll={this.scrollEve.bind(this)}>
+              <span className='content-null'>Sorry！没有更多了。。。</span>
+        </ul>
+        )
+    }
     if (this.props.type === 0) {
       return (
         <ul className='content-list' ref={list => this.list = list} onScroll={this.scrollEve.bind(this)}>

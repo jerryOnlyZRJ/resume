@@ -68,7 +68,7 @@ xtag.register('x-selfinfo', {
             <div class="contact">
                 <ul class="contact-list">
                     <li class="contact-item iconfont icon-email"><a href="mailto:920997736@qq.com">920997736@qq.com</a></li>
-                    <li class="contact-item iconfont icon-phone">13275063516</li>
+                    <li class="contact-item iconfont icon-phone">13717849536</li>
                     <li class="contact-item iconfont icon-github"><a href="https://github.com/jerryOnlyZRJ">https://github.com/jerryOnlyZRJ</a></li>
                 </ul>
             </div>
@@ -225,6 +225,19 @@ xtag.register('x-chat', {
                 }
             })
 
+            /**
+             * 转义 HTML 特殊字符
+             * @param {String} str
+             */
+            function htmlEncode(str) {
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+            }
+
             //发送按钮出现
             function sendBtnDisplay() {
                 $sendButton.css('display', 'block')
@@ -276,7 +289,7 @@ xtag.register('x-chat', {
             }
 
             function sendMessage() {
-                const $msgValue = $('#msg-input').val()
+                const $msgValue = htmlEncode($('#msg-input').val())
                 renderSend($msgValue)
                 $msgInput.val('');
                 sendBtnDisappear()
@@ -287,7 +300,7 @@ xtag.register('x-chat', {
                         'userid': "jerry"
                     },
                     success: (data) => {
-                        renderRes(data.text)
+                        renderRes(htmlEncode(data.text))
                     }
                 })
             }

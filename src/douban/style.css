@@ -59,6 +59,16 @@
     padding: 0;
 }
 
+.content-null {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px 0;
+    font-size: 1rem;
+    font-family: fantasy;
+    color: #188eee;
+}
+
 .content-item {
     display: flex;
     height: 12rem;
