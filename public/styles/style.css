@@ -2,6 +2,17 @@
     display: none;
 }
 
+.the-more {
+    display: block;
+    position: absolute;
+    width: 25rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #188eee;
+    font-size: 2rem;
+}
+
 .loading-page.displayed {
     position: fixed;
     height: 100vh;
@@ -13,6 +24,10 @@
     align-items: center;
     font-size: 4rem;
     font-family: fantasy;
+}
+
+.loading-page.displayed + #container {
+    display: none;
 }
 
 .browerErr {
@@ -27,6 +42,15 @@
     color: #188eee;
     font-size: 3rem;
     font-family: -webkit-pictograph;
+}
+
+/*响应式兼容浏览器错误页面*/
+@media screen and (max-width: 770px){
+    .browerErr{
+        width: 100vw;
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
 p {
@@ -64,6 +88,9 @@ p {
 #flipbook .page {
     border: 1px solid grey;
     background: #fff;
+    /*硬件加速*/
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
 }
 
 .x-css {
@@ -102,10 +129,13 @@ p {
 
 .hard-arrow {
     position: absolute;
-    bottom: 8rem;
+    top: 0.5rem;
     right: 1rem;
     color: #188eee;
     animation: arrowMove 0.75s ease-in infinite alternate;
+    /*硬件加速*/
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
 }
 
 .hard-arrow .icon-arrow {

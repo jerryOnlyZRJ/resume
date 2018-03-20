@@ -85,7 +85,7 @@ require('../styles/x-selfintro.css')
 xtag.register('x-selfintro', {
     content: `<div class="self-intro">
             <figure class="dream-picture">
-                <img src="static/images/dream.jpg" alt="">
+                <img src="static/images/dream.webp" alt="">
                 <span style="font-size: 1.5rem;">平生逐梦，此心不悔</span>
             </figure>
             <div class="section-hd">
@@ -95,7 +95,7 @@ xtag.register('x-selfintro', {
                     <span class="title-text">前端开发</span>
                     <button class="title-btn">熟悉</button>
                 </div>
-                <div class="tech-details">HTML5, CSS3, ES6, JQUERY, REACT, SPA</div>
+                <div class="tech-details">HTML5, CSS3, ES6, jQuery, React, SPA</div>
                 <div class="item-progress-bar"><span class="bar-percent"></span></div>
             </div>
             <div class="tech-box">
@@ -103,7 +103,7 @@ xtag.register('x-selfintro', {
                     <span class="title-text">JS后端开发</span>
                     <button class="title-btn">了解</button>
                 </div>
-                <div class="tech-details">NODE.JS, KOA, LINUX, EXPRESS, PHP, MYSQL</div>
+                <div class="tech-details">Node.js, KOA, Linux, Express, PHP, MYSQL</div>
                 <div class="item-progress-bar"><span class="bar-percent"></span></div>
             </div>
             <div class="tech-box">
@@ -126,7 +126,7 @@ xtag.register('x-html', {
             <span style="color: #808080">H5语义化，元素组件化</span>
         </header>
         <section class="html-picture-box">
-            <img src="static/images/html.png" alt="">
+            <img src="static/images/html.webp" alt="">
         </section>
         `
 })
@@ -141,12 +141,12 @@ xtag.register('x-css', {
         </header>
         <main class="animation-box">
             <div id="cube">
-                <div><img src="static/images/jerry.jpg" /></div>
-                <div><img src="static/images/jerry.jpg" /></div>
-                <div><img src="static/images/jerry.jpg" /></div>
-                <div><img src="static/images/jerry.jpg" /></div>
-                <div><img src="static/images/jerry.jpg" /></div>
-                <div><img src="static/images/jerry.jpg" /></div>
+                <div><img src="static/images/jerry.webp" /></div>
+                <div><img src="static/images/jerry.webp" /></div>
+                <div><img src="static/images/jerry.webp" /></div>
+                <div><img src="static/images/jerry.webp" /></div>
+                <div><img src="static/images/jerry.webp" /></div>
+                <div><img src="static/images/jerry.webp" /></div>
             </div>
         </main>`
 })
@@ -159,7 +159,7 @@ xtag.register('x-es6', {
             <span style="color: #808080">将OOP思想代入JavaScript</span>
         </header>
         <section class="html-picture-box" style="zoom: 0.6">
-            <img src="static/images/ES6.png" alt="">
+            <img src="static/images/ES6.webp" alt="">
         </section>
         <footer class="html-footer">
             <button class="html-button">相关文档</button>
@@ -181,7 +181,7 @@ xtag.register('x-chat', {
                     <span class="chat-time">刚刚</span>
                 </div>
                 <div class="chat-box chat-box-left">
-                    <img class="chat-avatar" src="static/images/jerry.jpg" />
+                    <img class="chat-avatar" src="static/images/jerry.webp" />
                     <div class="chat-content">
                         <div class="chat-content-inner">Hello</div>
                         <div class="chat-content-arrow"></div>
@@ -278,7 +278,7 @@ xtag.register('x-chat', {
             //渲染回复信息
             function renderRes(value) {
                 let responseMsg = `<div class="chat-box chat-box-left">
-                                  <img class="chat-avatar" src="static/images/jerry.jpg" />
+                                  <img class="chat-avatar" src="static/images/jerry.webp" />
                                   <div class="chat-content">
                                 <div class="chat-content-inner">${value}</div>
                                 <div class="chat-content-arrow"></div>
@@ -315,16 +315,17 @@ xtag.register('x-chat', {
 //x-jquery
 xtag.register('x-jquery', {
     content: `<header class="xtag-header">
-            <h2 class="xtag-title">JQUERY</h2>
+            <h2 class="xtag-title">jQuery</h2>
             <hr style="margin: 10px">
             <span style="color: #808080">JavaScript Library</span>
         </header>
         <section class="text-describe">
             <h2>框架只是工具，思想才是王道</h2>
             <hr style="margin: 10px">
-            <p>接下来你将看到一款使用JQUERY作为工具库开发的简易版聊天机器人，试着和他说些话吧，他很有趣的哦！</p>
+            <p>左侧的demo就是一款使用jQuery作为工具库开发的简易版聊天机器人，试着和他说些话吧，他很有趣的哦！</p>
             <p>PS:这里开发的时候有点小坑，用jQuery.on绑定click事件之后会多次触发，不明觉厉的我去源代码
             里面debugger，发现事件被绑定了多次绑定，具体成因尚在研究，不过我通过了unbind()这么一个方法暂时性解决了这个问题。</p>
+            <p><-  <-  <-</p>
         </section>
         `
 })
@@ -332,15 +333,16 @@ xtag.register('x-jquery', {
 //x-react
 xtag.register('x-react', {
     content: `<header class="xtag-header">
-            <h2 class="xtag-title">REACT</h2>
+            <h2 class="xtag-title">React</h2>
             <hr style="margin: 10px">
             <span style="color: #808080">JavaScript Framework</span>
         </header>
         <section class="text-describe">
             <h2>Web组件化思想的实战运用</h2>
             <hr style="margin: 10px">
-            <p>作为三大框架之一的React，通过props进行组件间数据传递是其一大亮点，接下来你将看到一款使用React
+            <p>作为三大框架之一的React，通过props进行组件间数据传递是其一大亮点，试试这样一款使用React
             开发的口袋豆瓣，尝试搜索些内容或者下拉刷新，你可以体验到这款框架的奇妙之处！！！(*^__^*) 嘻嘻</p>
+            <p><-  <-  <-</p>
         </section> `
 })
 
