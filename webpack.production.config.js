@@ -9,7 +9,6 @@ module.exports = {
         path: __dirname + '/build/static', // 打包后的文件存放的地方
         filename: 'scripts/[name]-[hash:5].js' // 打包后输出文件的文件名,带有md5 hash戳
     },
-    devtools: false,
     resolve: {
         extensions: ['.jsx', '.js']
     },

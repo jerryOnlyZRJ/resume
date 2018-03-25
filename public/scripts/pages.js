@@ -57,7 +57,7 @@ require('../styles/x-selfinfo.css')
 xtag.register('x-selfinfo', {
     content: `<div class="main">
             <div class="user-avatar">
-                <img src="http://ac-iiyq8wju.clouddn.com/f81157e67c039ec9f5f4.png" alt="">
+                <img src="static/images/avatar.webp" alt="">
             </div>
             <h1 class="user-name">
                 Jerry
@@ -264,7 +264,7 @@ xtag.register('x-chat', {
             //渲染发送信息
             function renderSend(value) {
                 let willSendMsg = `<div class="chat-box chat-box-right">
-                        <img class="chat-avatar" src="http://ac-iiyq8wju.clouddn.com/f81157e67c039ec9f5f4.png"/>
+                        <img class="chat-avatar" src="static/images/avatar.webp"/>
                         <div class="chat-content">
                         <div class="chat-content-inner">
                         ${value}</div>
