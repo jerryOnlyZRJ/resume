@@ -23,7 +23,7 @@ class MovieDetail extends Component {
             {casts.map((item, index) => {
 			                    		return (
   <figure className='actor-detail' key={index}>
-    <img src={item.avatars.small} alt='' className='picture-box' />
+    <img src={item.avatars.small} alt='' className='picture-box' referrerPolicy ="never" />
     <span className='actor-name'>{item.name}</span>
   </figure>
 			                    		)
