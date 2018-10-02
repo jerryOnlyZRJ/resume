@@ -8,7 +8,7 @@ class MusicItem extends 	Component {
     return (
       <li className='content-item' onClick={this.choiceThis.bind(this)}>
         <div className='item-img'>
-          <img src={image} alt='' />
+          <img src={image} alt='' referrerPolicy ="never" />
         </div>
         <div className='item-introduction'>
           <span className='music-info'>名称：{title}</span>
