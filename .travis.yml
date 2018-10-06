@@ -7,3 +7,16 @@ cache:
 before_install:
 - openssl aes-256-cbc -K $encrypted_7c21d1a5a4f2_key -iv $encrypted_7c21d1a5a4f2_iv
   -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
+- cp ssh_config ~/.ssh/config
+- cp resume_travis_key /tmp/resume_travis_key
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/resume_travis_key
+- ssh-add /tmp/resume_travis_key
+before_script:
+- npm run build
+after_success:
+- rsync -r --quiet build/* favicon.ico resume-server:$DEPLOY_PATH
+env:
+  global:
+    secure: s61ws7HSp5CrWGPDz8KyyxzLa86xZo/LsJP2c2nI8IfjpW/byV+bJwBhELgU0XILs2iLeMtFsPAlqNRrBe8zZ0qpcRUqnw/ujziv1k9x5cfzghsF2NfOQHdz55sIOAfgV8nUUeK1wlgf8slUcAA6Fs3LHjzWkoAxDOzXqb80nnGgSraGs4YMEpIuiMYZrUSSdDVbfoB59SE/zta1qNQJfsV5RvbJwm+Pgzw129hhT+i9WSbSJp6e0ZBfqQBYrjvkRaOmtDHpB22vfzy5yueMWL4l+vaBmNwxMBFWW2fpm8RDI5uNZAVDtbetGd5Qzm5kecs5Li3k6dnQRLtXtqiYuaE7G8UaKvsQPLWls+rEOLc+l/kChFCB8swsbAFD8YOxtx3MoK1xiKEoPdpKA1k6GRYzAtrm3q+21GcM17c8EPcQeuZvi9IwkG8EyD4rDQc9rCUZXhvkQbhEjLfEvhsPKsnPrEfCwdi8YqHzgxcn0s4aj/RwlBJtmCzzhi7Sq0cbMy5wUBKkTaSoLX6xDX3JQYg5VnYHstIhBzQQgaKXXi6ZbdnIOghITgF6c+1jM3t11vm7heu2XoD4kNCFuKMWqqk31XMj/5S6rAHCijqBTZttSI6bXx1AuCZbm+pVmJovw/XGth4dc/1EgV9M/FOcZa/QULm7G0wP2aoBmekiN3U=
