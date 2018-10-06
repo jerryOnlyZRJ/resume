@@ -1,5 +1,5 @@
 
-import React, {Component} from 'React'
+import React, {Component} from 'react'
 import BookItem from './bookItem'
 import MovieItem from './movieItem'
 import MusicItem from './musicItem'

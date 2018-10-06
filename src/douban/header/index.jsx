@@ -1,5 +1,5 @@
-import React, { Component } from 'React'
-import CONFIG from '../../config/CONFIG'
+import React, { Component } from 'react'
+import CONFIG from '../../config/config'
 import indexController from '../../controllers/indexController'
 /**
  * 转义 HTML 特殊字符
