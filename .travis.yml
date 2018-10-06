@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "8.9.3"
+- 8.12.0
 cache:
   directories:
-    - "node_modules"
+  - node_modules
+before_install:
+- openssl aes-256-cbc -K $encrypted_7c21d1a5a4f2_key -iv $encrypted_7c21d1a5a4f2_iv
+  -in secrets.tar.enc -out secrets.tar -d

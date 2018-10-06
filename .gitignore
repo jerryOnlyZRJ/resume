@@ -1,4 +1,9 @@
 #node_modules
 node_modules/
-#rar files
-resume.rar
+#MAC
+.DS_Store
+*/.DS_Store 
+#ssh key
+resume_travis_key
+#ssh config
+ssh_config
