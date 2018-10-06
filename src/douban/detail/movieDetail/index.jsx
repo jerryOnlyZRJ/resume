@@ -1,4 +1,4 @@
-import React, {Component} from 'React'
+import React, {Component} from 'react'
 class MovieDetail extends Component {
   render () {
     const {title, average, casts, directors, genres, image, year} = this.props.data

@@ -1,4 +1,4 @@
-import React, {Component} from 'React'
+import React, {Component} from 'react'
 class MusicDetail extends Component {
   render () {
     const {author, average, image, pubdate, publisher, summary, tags, title} = this.props.data

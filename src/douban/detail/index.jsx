@@ -1,4 +1,4 @@
-import React, {Component} from 'React'
+import React, {Component} from 'react'
 import BookDetail from './bookDetail'
 import MovieDetail from './movieDetail'
 import MusicDetail from './musicDetail'

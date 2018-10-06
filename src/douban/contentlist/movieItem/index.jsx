@@ -1,4 +1,4 @@
-import React, {Component} from 'React'
+import React, {Component} from 'react'
 class movieItem extends Component {
   choiceThis () {
     this.props.choiceItem(this.props.index)

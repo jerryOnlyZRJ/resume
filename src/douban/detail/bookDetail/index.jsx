@@ -1,4 +1,4 @@
-import React, {Component} from 'React'
+import React, {Component} from 'react'
 class BookDetail extends 	Component {
   render () {
     const {author, average, catalog, id, image, price, pubdate, publisher, subtitle, summary, tags} = this.props.data
