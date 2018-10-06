@@ -1,4 +1,4 @@
-import CONFIG from '../config/CONFIG'
+import CONFIG from '../config/config'
 import Data from '../models/indexModel'
 import arrangeData from './arrangeData'
 /**
