@@ -4,7 +4,7 @@
   "description": "Jerry's resume",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "start": "webpack",
     "dev": "webpack-dev-server --hot",
     "build": "set NODE_ENV=production && webpack --config ./webpack.prod.js --progress"
