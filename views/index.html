@@ -23,8 +23,8 @@
             <li></li>
         </ul>
         <div id="flipbook">
-            <div class="hard"> 
-                <img class="cover-img" src="static/images/hard.webp" alt=""> 
+            <div class="hard">
+                <img class="cover-img" src="static/images/hard.webp" alt="">
                 <div class="hard-arrow"><i class="iconfont icon-arrow"></i></div>
             </div>
             <div>
@@ -76,16 +76,27 @@
             <div>
                 <x-react></x-react>
             </div>
-            <div class="hard" style="background: #d6d6d6;"><x-end></x-end></div>
+            <div class="hard" style="background: #d6d6d6;">
+                <x-end></x-end>
+            </div>
         </div>
     </div>
     <script type="text/javascript">
-    function isChrome() {
-        return navigator.userAgent.indexOf("Chrome") > -1 ? true : false
-    }
-    if (!isChrome()) {
-        document.body.innerHTML = '<span class="browerErr">Sorry (。﹏。!) 请使用PC端Chrome浏览器打开页面</span>'
-    }
+    /**
+     * isOpenInMobile 判断页面是否在浏览器打开
+     * @return {Boolean}
+     */
+        function isOpenInMobile() {
+            const regExp = /phone|pad|pod|iPhone|iPod|iPad|ios|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i
+            return regExp.test(navigator.userAgent)
+        }
+        // 判断是否在chrome打开（处理webp兼容性）
+        function isChrome() {
+            return navigator.userAgent.indexOf("Chrome") > -1 ? true : false
+        }
+        if (!isChrome() || isOpenInMobile()) {
+            document.body.innerHTML = '<span class="browerErr">Sorry (。﹏。!) 请使用PC端Chrome浏览器打开页面</span>'
+        }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/x-tag/1.5.11/x-tag-core-with-shadowdom.min.js"></script>
