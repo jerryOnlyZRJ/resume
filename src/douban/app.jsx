@@ -85,18 +85,17 @@ class App extends Component {
         })
     }
     render() {
-        return ( <
-            div className = 'app' >
-            <
-            Header type = { this.state.type } afterSearch = { this.afterSearch.bind(this) }
-            /> <
-            ContentList start = { this.state.start } afterGetMore = { this.afterGetMore.bind(this) } keyword = { this.state.keyword } choiceItem = { this.choiceItem.bind(this) } ref = { contentlist => this.contentlist = contentlist } type = { this.state.type } data = { this.state.data }
-            /> <
-            Footer ref = { footer => this.footer = footer } changeBookType = { this.changeBookType.bind(this) } changeMovieType = { this.changeMovieType.bind(this) } changeMusicType = { this.changeMusicType.bind(this) }
-            /> <
-            Detail type = { this.state.type } data = { this.state.data[this.state.itemIndex] } detailShow = { this.state.detailShow } closeDetail = { this.closeDetail.bind(this) }
-            /> <
-            /div>
+        return (
+            <div className='app'>
+                <Header type={this.state.type} afterSearch={this.afterSearch.bind(this)} ß/>
+                <
+                    ContentList start={this.state.start} afterGetMore={this.afterGetMore.bind(this)} keyword={this.state.keyword} choiceItem={this.choiceItem.bind(this)} ref={contentlist => this.contentlist = contentlist} type={this.state.type} data={this.state.data}
+                /> <
+                    Footer ref={footer => this.footer = footer} changeBookType={this.changeBookType.bind(this)} changeMovieType={this.changeMovieType.bind(this)} changeMusicType={this.changeMusicType.bind(this)}
+                /> <
+                    Detail type={this.state.type} data={this.state.data[this.state.itemIndex]} detailShow={this.state.detailShow} closeDetail={this.closeDetail.bind(this)}
+                />
+            </div>
         )
     }
 }
