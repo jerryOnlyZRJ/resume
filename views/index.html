@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,8 @@
 </head>
 
 <body>
-    <div class="loading-page displayed"><span>loading...</span></div>
+    <div class="loading-page displayed"><span>loading...
+        </span></div>
     <div class="container" id="container">
         <div id="background"></div>
         <ul class="color-selector">
@@ -82,10 +83,7 @@
         </div>
     </div>
     <script type="text/javascript">
-    /**
-     * isOpenInMobile 判断页面是否在浏览器打开
-     * @return {Boolean}
-     */
+        // 判断页面是否在浏览器打开
         function isOpenInMobile() {
             const regExp = /phone|pad|pod|iPhone|iPod|iPad|ios|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i
             return regExp.test(navigator.userAgent)
